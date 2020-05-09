@@ -69,6 +69,15 @@ public class CustomerBootstrap implements CommandLineRunner {
                 .build();
         customerRepository.save(customer3);
 
+        Customer customer4 = Customer.builder()
+                .firstName("Ricky")
+                .lastName("Ponting")
+                .email("ponting@gmail.com")
+                .customerType(CustomerType.LEAD)
+                .tag(Tag.ORANGE)
+                .build();
+        customerRepository.save(customer4);
+
         System.out.println("Number of customers: "+ customerRepository.count());
         System.out.println("Customer data loaded successfully");
     }
